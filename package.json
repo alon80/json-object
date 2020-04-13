@@ -1,0 +1,22 @@
+{
+  "name": "json-object",
+  "version": "1.0.0",
+  "description": "Inspired by gson library",
+  "main": "index.js",
+  "scripts": {
+    "test": "node example/example.js"
+  },
+  "keywords": [
+    "json",
+    "object",
+    "model"
+  ],
+  "author": "Alon Levanon",
+  "license": "ISC",
+  "devDependencies": {
+    "release-it": "^13.5.0"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}

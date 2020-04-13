@@ -1,0 +1,24 @@
+{
+  "id": 123456,
+  "product_name": "Acme headphones",
+  "price": 289.99,
+  "in_stock": true,
+  "description": null,
+  "seller": {
+    "name": "Acme Industries",
+    "email": "acme@mail.com"
+  },
+  "images": [
+    {
+      "height": 640,
+      "width": 640,
+      "title": "some title",
+      "url": "https://some.url.to.image"
+    },
+    {
+      "height": 640,
+      "width": 640,
+      "url": "https://some.url.to.image"
+    }
+  ]
+}
