@@ -77,6 +77,7 @@ console.log(JSON.stringify(album));
 ### `options.mapFrom` & `options.mapTo`
 
 `options.mapFrom`: use this option when the input object has a different property name than your class.
+
 `options.mapTo`: use this option when you want a different property name when stringifying your object.
 
 ##### Example:  
@@ -126,6 +127,7 @@ console.log(JSON.stringify(album));
 ### `options.class`
 
 This option is available for object and array proprties.
+
 Use this option to ensure your property is a specific class (or an array of specific class).
 
 ```ecmascript 6

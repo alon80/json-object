@@ -4,7 +4,8 @@
   "description": "Inspired by gson library",
   "main": "index.js",
   "scripts": {
-    "test": "node example/example.js"
+    "test": "node example/example.js",
+    "release": "release-it"
   },
   "keywords": [
     "json",
@@ -13,6 +14,11 @@
   ],
   "author": "Alon Levanon",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alon80/json-object.git"
+  },
+  "homepage": "https://github.com/alon80/json-object/blob/master/README.md",
   "devDependencies": {
     "release-it": "^13.5.0"
   },
