@@ -1,5 +1,26 @@
 # JSON Object Model
 
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+  * [Basic](#basic)
+      - [Create instance:](#create-instance-)
+      - [Outputs:](#outputs-)
+  * [`options.mapFrom` & `options.mapTo`](#-optionsmapfrom-----optionsmapto-)
+      - [Example:](#example-)
+      - [Outputs:](#outputs--1)
+  * [`options.class`](#-optionsclass-)
+      - [Outputs:](#outputs--2)
+  * [`options.def`](#-optionsdef-)
+      - [Example](#example)
+      - [Output:](#output-)
+  * [options.deleteIfUndefined](#optionsdeleteifundefined)
+      - [Example](#example-1)
+      - [Output:](#output--1)
+- [Full Example](#full-example)
+- [What's next](#what-s-next)
+
+
 ## Installation
 `npm install bla bla`
 
