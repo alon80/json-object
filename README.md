@@ -3,7 +3,7 @@
 - [Installation](#installation)
 - [Features](#features)
 - [Usage](#usage)
-  * [Basic](#basic)
+  * [`PropertyTypes`](#basic)
   * [`options.mapFrom` & `options.mapTo`](#-optionsmapfrom-----optionsmapto-)
   * [`options.class`](#-optionsclass-)
   * [`options.def`](#-optionsdef-)
@@ -27,7 +27,8 @@
 
 ## Usage
 
-### Basic
+### `PropertyTypes`
+
 
 ```js
 const {BaseObject, PropertyType} = require('@alon80/json-object');
