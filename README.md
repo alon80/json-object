@@ -4,25 +4,16 @@
 - [Features](#features)
 - [Usage](#usage)
   * [Basic](#basic)
-      - [Create instance:](#create-instance-)
-      - [Outputs:](#outputs-)
   * [`options.mapFrom` & `options.mapTo`](#-optionsmapfrom-----optionsmapto-)
-      - [Example:](#example-)
-      - [Outputs:](#outputs--1)
   * [`options.class`](#-optionsclass-)
-      - [Outputs:](#outputs--2)
   * [`options.def`](#-optionsdef-)
-      - [Example](#example)
-      - [Output:](#output-)
-  * [options.deleteIfUndefined](#optionsdeleteifundefined)
-      - [Example](#example-1)
-      - [Output:](#output--1)
+  * [`options.deleteIfUndefined`](#optionsdeleteifundefined)
 - [Full Example](#full-example)
 - [What's next](#what-s-next)
 
 
 ## Installation
-`npm install bla bla`
+`npm i @alon80/json-object`
 
 ## Features
 
@@ -33,20 +24,19 @@
 * Map property names inputs and outputs (inspired by gson annotations)
 * Use '_' prefix if you would like to use your custom setters or getters
 
+
 ## Usage
 
 ### Basic
 
-```ecmascript 6
-const {BaseObject, PropertyType} = require('@bla/json');
+```js
+const {BaseObject, PropertyType} = require('@alon80/json-object');
 
 class Album extends BaseObject {
 
     _id = PropertyType.integer();
-    /**
-    You can also use without the "_" prefix:
-    id = PropertyType.integer();
-    **/
+    // You can also use without the "_" prefix:
+    // id = PropertyType.integer();
     _name = PropertyType.string();
     _artist = PropertyType.object();
     _songs = PropertyType.array();
@@ -61,7 +51,7 @@ class Album extends BaseObject {
 
 ##### Create instance:
 
-```ecmascript 6
+```js
 const json = {id: 1234, name: 'The Flying Eggplant'};
 // Method 1:
 const album = new Album(json);
@@ -70,7 +60,7 @@ const album = Album.fromJSON(json);
 ```
 ##### Outputs:
 
-```ecmascript 6
+```js
 console.log(album);
 /**
  Output:
@@ -82,7 +72,7 @@ console.log(album);
  }
 **/
 ```
-```ecmascript 6
+```js
 console.log(JSON.stringify(album));
 /**
  Output:
@@ -102,7 +92,7 @@ console.log(JSON.stringify(album));
 `options.mapTo`: use this option when you want a different property name when stringifying your object.
 
 ##### Example:  
-```ecmascript 6
+```js
 class Album extends BaseObject {
 
     _id = PropertyType.integer();
@@ -114,13 +104,13 @@ class Album extends BaseObject {
 }
 ```
 
-```ecmascript 6
+```js
 const album = new Album({id: 1234, title: 'The Flying Eggplant'});
 ```
 
 ##### Outputs:
 
-```ecmascript 6
+```js
 console.log(album);
 /**
  Output:
@@ -132,7 +122,7 @@ console.log(album);
  }
 **/
 ```
-```ecmascript 6
+```js
 console.log(JSON.stringify(album));
 /**
  Output:
@@ -151,7 +141,7 @@ This option is available for object and array proprties.
 
 Use this option to ensure your property is a specific class (or an array of specific class).
 
-```ecmascript 6
+```js
 class Song extends BaseObject {
     ...
 }
@@ -169,13 +159,13 @@ class Album extends BaseObject {
 }
 ```
 
-```ecmascript 6
+```js
 const album = new Album({id: 1234, name: 'The Flying Eggplant'});
 ```
 
 ##### Outputs:
 
-```ecmascript 6
+```js
 console.log(album);
 /**
  Output:
@@ -187,7 +177,7 @@ console.log(album);
  }
 **/
 ```
-```ecmascript 6
+```js
 console.log(JSON.stringify(album));
 /**
  Output:
@@ -216,13 +206,13 @@ Array | []
 
 ##### Example
 
-```ecmascript 6
+```js
 _description = PropertyType.string({def: 'This item has no description'});
 ```
 
 ##### Output:
 
-```ecmascript 6
+```js
 const album = new Album({id: 1234, name: 'The Flying Eggplant'});
 console.log(JSON.stringify(album));
 /**
@@ -237,19 +227,19 @@ console.log(JSON.stringify(album));
 **/
 ```
 
-### options.deleteIfUndefined
+### `options.deleteIfUndefined`
 
 If set to true, delete the property if undefined (or misstyped)
 
 ##### Example 
 
-```ecmascript 6
+```js
 _description = PropertyType.string({deleteIfUndefined: true});
 ```
 
 ##### Output:
 
-```ecmascript 6
+```js
 const album = new Album({id: 1234, name: 'The Flying Eggplant'});
 console.log(JSON.stringify(album));
 /**
@@ -299,7 +289,7 @@ The product object has some primitive members, a seller object and an array of i
 We can model it to 3 classes:
 
 1. Seller
-    ```ecmascript 6
+    ```js
     class Seller extends BaseObject {
     
         _name = PropertyType.string();
@@ -313,7 +303,7 @@ We can model it to 3 classes:
     ```
 
 2. Image
-    ```ecmascript 6
+    ```js
     class Image extends BaseObject {
     
         _height = PropertyType.integer({mapTo: 'h'});
@@ -329,7 +319,7 @@ We can model it to 3 classes:
     ```
 
 3. Product
-    ```ecmascript 6
+    ```js
     class Product extends BaseObject {
     
         _id = PropertyType.integer();
@@ -348,7 +338,7 @@ We can model it to 3 classes:
     ```
 
 Now you can use it
-```ecmascript 6
+```js
 const json = require('./example.json');
 // method 1:
 const product = new Product(json);
