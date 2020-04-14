@@ -1,11 +1,11 @@
 {
-  "name": "json-object",
-  "version": "1.0.1",
-  "description": "Inspired by gson library",
+  "name": "@alon80/json-object",
+  "version": "1.0.2",
+  "description": "Inspired by the gson library",
   "main": "index.js",
   "scripts": {
     "test": "node example/example.js",
-    "release": "release-it"
+    "release": "release-it --no-git.requireCleanWorkingDir"
   },
   "keywords": [
     "json",
