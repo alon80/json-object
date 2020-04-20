@@ -1,6 +1,6 @@
 {
   "name": "@alon80/json-object",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Inspired by the gson library",
   "main": "index.js",
   "scripts": {
