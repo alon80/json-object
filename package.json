@@ -1,6 +1,6 @@
 {
   "name": "@alon80/json-object",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "Inspired by the gson library",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
   "keywords": [
     "json",
     "object",
-    "model"
+    "model",
+    "schema"
   ],
   "author": "Alon Levanon",
   "license": "MIT",

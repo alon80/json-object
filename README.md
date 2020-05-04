@@ -1,5 +1,10 @@
 # JSON Object Model
 
+
+***
+****Working on a new readme, below is an outdated one...****
+***
+
 - [Installation](#installation)
 - [Features](#features)
 - [Usage](#usage)
@@ -101,7 +106,7 @@ class Album extends BaseObject {
     _artist = PropertyType.object();
     _songs = PropertyType.array({mapTo: 'playlist'});
     
-    ...
+    //...
 }
 ```
 
@@ -144,10 +149,10 @@ Use this option to ensure your property is a specific class (or an array of spec
 
 ```js
 class Song extends BaseObject {
-    ...
+    //...
 }
 class Artist extends BaseObject {
-    ...
+    //...
 }
 class Album extends BaseObject {
 
@@ -156,7 +161,7 @@ class Album extends BaseObject {
     _artist = PropertyType.object({class: Artist});
     _songs = PropertyType.array({class: Song});
     
-    ...
+    //...
 }
 ```
 
